@@ -2,13 +2,71 @@ let box = document.getElementsByClassName("container")
 
 
 
-for (var i = 0; i < box.length; i++) {
-    console.log(box[i])
-    box[i].addEventListener("click", changeColor)
-}
+// for (var i = 0; i < box.length; i++) {
+//     console.log(box[i])
+//     box[i].addEventListener("click", changeColor)
+// }
 
-function changeColor() {
-    for (var i = 0; i < box.length; i++) {
-        box[i].className = "btn"
+// function changeColor() {
+//     for (var i = 0; i < box.length; i++) {
+//         box[i].className = "btn"
+//     }
+// }
+
+// let btn = document.getElementById("submit");
+// let inputEmail = document.getElementById("email");
+
+// btn.addEventListener("click", function () {
+//     let email = inputEmail.value;
+//     console.log("Email entered:", email);
+
+//     // Reset previous states
+//     inputEmail.classList.remove("brdr");
+
+//     // Simple email validation
+//     if (!email.includes("@")) {
+//         // No @ found in the email
+//         inputEmail.classList.add("brdr");
+//         console.log("Invalid email - missing @ symbol");
+//     } else {
+//         // @ exists in the email
+//         console.log("Valid email - @ symbol exists");
+
+//         // You could add more validation here if needed
+//         // For example: check for . after @, minimum length, etc.
+//     }
+// });
+
+let btn = document.getElementById("submit");
+let inputEmail = document.getElementById("email");
+let flag = false;
+
+btn.addEventListener("click", function () {
+    console.log(inputEmail.value);
+    flag = false;
+
+   
+
+    
+    for (let i = 0; i < inputEmail.value.length; i++) {
+        if (inputEmail.value[i] !== "@") {
+            inputEmail.classList.add("brdr");
+        } else {
+            console.log("else");
+            inputEmail.classList.remove("brdr");
+            flag = true;
+            console.log("@ exists");
+            break;
+        }
     }
-}
+
+    
+    if (!flag) {
+        console.log("No @ found in email");
+    }
+});
+
+
+inputEmail.addEventListener("input", function () {
+    inputEmail.classList.remove("brdr");
+});
