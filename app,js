@@ -37,36 +37,53 @@ let box = document.getElementsByClassName("container")
 //     }
 // });
 
-let btn = document.getElementById("submit");
-let inputEmail = document.getElementById("email");
-let flag = false;
+// let btn = document.getElementById("submit");
+// let inputEmail = document.getElementById("email");
+// let flag = false;
 
-btn.addEventListener("click", function () {
-    console.log(inputEmail.value);
-    flag = false;
+// btn.addEventListener("click", function () {
+//     console.log(inputEmail.value);
+//     flag = false;
 
    
 
     
-    for (let i = 0; i < inputEmail.value.length; i++) {
-        if (inputEmail.value[i] !== "@") {
-            inputEmail.classList.add("brdr");
-        } else {
-            console.log("else");
-            inputEmail.classList.remove("brdr");
-            flag = true;
-            console.log("@ exists");
-            break;
-        }
-    }
+//     for (let i = 0; i < inputEmail.value.length; i++) {
+//         if (inputEmail.value[i] !== "@") {
+//             inputEmail.classList.add("brdr");
+//         } else {
+//             console.log("else");
+//             inputEmail.classList.remove("brdr");
+//             flag = true;
+//             console.log("@ exists");
+//             break;
+//         }
+//     }
 
     
-    if (!flag) {
-        console.log("No @ found in email");
-    }
-});
+//     if (!flag) {
+//         console.log("No @ found in email");
+//     }
+// });
 
 
-inputEmail.addEventListener("input", function () {
-    inputEmail.classList.remove("brdr");
-});
+// inputEmail.addEventListener("input", function () {
+//     inputEmail.classList.remove("brdr");
+// });
+
+
+// const bulb = document.getElementById('bulb');
+// const onBtn = document.getElementById('onBtn');
+// const offBtn = document.getElementById('offBtn');
+
+// // Turn on the bulb
+// onBtn.addEventListener('click', function() {
+//     bulb.classList.add('on');
+// });
+
+// // Turn off the bulb
+// offBtn.addEventListener('click', function() {
+//     bulb.classList.remove('on');
+// });
+
+ 
